@@ -49,7 +49,7 @@ const Dishdetail = ({dish, comments}) => {
                     <Link to="/menu">Menu</Link>
                     </BreadcrumbItem>
                     <BreadcrumbItem active>
-                    <Link to={dish.id}>{dish.name}</Link>
+                    <Link to="">{dish.name}</Link>
                     </BreadcrumbItem>
                 </Breadcrumb>
                <div className="row">
