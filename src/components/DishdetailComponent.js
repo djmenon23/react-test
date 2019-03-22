@@ -21,7 +21,7 @@ const RenderDish = ({dish}) => {
   );
 }
 
-const RenderComments = ({comments}) => {
+const RenderComments = ({comments, addComment, dishId}) => {
     return(  
     <div className="col-12 col-md-5 m-1">
     <h4>Comments</h4>
@@ -39,7 +39,7 @@ const RenderComments = ({comments}) => {
     );
   }
 
-const Dishdetail = ({dish, comments}) => {
+const Dishdetail = ({dish, comments, addComment}) => {
   
             return(
                dish !== null && dish !== undefined ?
@@ -55,7 +55,10 @@ const Dishdetail = ({dish, comments}) => {
                <div className="row">
              
                 <RenderDish dish={dish}></RenderDish>
-                <RenderComments comments={comments}></RenderComments>
+                <RenderComments comments={comments}
+                addComment={addComment}
+                dishId={dish.id}
+                ></RenderComments>
                 </div>
                 </div>
                 :
